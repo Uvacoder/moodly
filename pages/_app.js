@@ -7,7 +7,7 @@ import PlausibleProvider from "next-plausible";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <PlausibleProvider domain="moodly-app.vercel.app">
+    <PlausibleProvider domain="moodly.site">
       <Toaster position="bottom-left" reverseOrder={false} />
       <Component {...pageProps} />
       <MetaTags />
