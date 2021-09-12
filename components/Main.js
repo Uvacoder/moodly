@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Slider } from "@material-ui/core";
 import { Btn } from ".";
 
+// showing progress using nprogress
+import NProgress from "nprogress";
+
 import { FiVolume, FiVolume1, FiVolume2, FiVolumeX } from "react-icons/fi";
 import toast from "react-hot-toast";
 
@@ -13,6 +16,7 @@ const Main = ({ sounds }) => {
 
     if (audio.paused) {
       toast.loading(`Loading ${name} 🎵`); /// loading state
+      NProgress.start();
 
       audio.play();
       gradientDiv.classList.add("gradient-animated");
@@ -20,11 +24,13 @@ const Main = ({ sounds }) => {
 
       setTimeout(() => {
         toast.remove();
+        NProgress.done();
       }, [1000]);
     } else {
       audio.pause();
       setTimeout(() => {
         toast.remove();
+        NProgress.done();
       }, [1000]);
 
       gradientDiv.classList.remove("gradient-animated");

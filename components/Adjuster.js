@@ -1,8 +1,11 @@
 import React from "react";
 import { Btn } from ".";
-import { FiPause, FiPlay, FiShuffle } from "react-icons/fi";
+import { FiShuffle } from "react-icons/fi";
 import toast from "react-hot-toast";
 import sounds from "./sounds";
+
+// showing progress using nprogress
+import NProgress from "nprogress";
 
 const Adjuster = () => {
   const playButton = (data) => {
@@ -15,6 +18,7 @@ const Adjuster = () => {
 
       if (audio.paused) {
         toast.loading(`Loading ${name} 🎵`); /// loading state
+        NProgress.start();
 
         audio.play();
         gradientDiv.classList.add("gradient-animated");
@@ -22,11 +26,13 @@ const Adjuster = () => {
 
         setTimeout(() => {
           toast.remove();
+          NProgress.done();
         }, [1000]);
       } else {
         audio.pause();
         setTimeout(() => {
           toast.remove();
+          NProgress.done();
         }, [1000]);
 
         gradientDiv.classList.remove("gradient-animated");
