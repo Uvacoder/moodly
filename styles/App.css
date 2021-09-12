@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Epilogue:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Epilogue";
+}
+.grained-bg {
+  background-color: #f1efe5;
+  background-image: url("https://uploads-ssl.webflow.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png");
+  background-position: 0 0;
+  background-size: auto;
+  background-repeat: repeat;
+}
+.white-grained {
+  background-color: #fff;
+  background-image: url("https://uploads-ssl.webflow.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png");
+  background-position: 0 0;
+  background-size: auto;
+  background-repeat: repeat;
+}
+
+.gradient-animated {
+  background-image: linear-gradient(
+    115deg,
+    #4fcf70,
+    #fad648,
+    #a767e5,
+    #12bcfe,
+    #44ce7b
+  );
+  -webkit-animation: play 1.6s ease-in infinite;
+}
+
+@-webkit-keyframes play {
+  0% {
+    background-position: 0px;
+  }
+  20% {
+    background-position: -110px;
+  }
+  35% {
+    background-position: -180px;
+  }
+  50% {
+    background-position: -210px;
+  }
+  80% {
+    background-position: -350px;
+  }
+  100% {
+    background-position: -390px;
+  }
+}
+
+.item {
+  transition: 0.5s !important;
+}
+.item:hover {
+  box-shadow: 0px 32px 64px 0px #bcbcbc;
+}
+.d-4 {
+  --c: 20px; /* the cube perspective */
+
+  --g: calc(var(--c) * 0.707); /* 0.707 = cos(45deg) = sin(45deg) */
+
+  border: solid transparent;
+  border-width: 0 0 var(--c) var(--c);
+  background: linear-gradient(
+        -45deg,
+        transparent var(--g),
+        rgba(255, 255, 255, 0.6) 0
+      )
+      left / var(--c) 100%,
+    linear-gradient(135deg, transparent var(--g), rgba(255, 255, 255, 0.3) 0)
+      bottom / 100% var(--c);
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  transition: 0.3s, background-color 0.3s 0.3s, color 0.3s 0.3s;
+  transform: translate(calc(var(--c) / -1), calc(var(--c) / 1));
+  clip-path: polygon(
+    var(--c) 0%,
+    var(--c) 0%,
+    100% 0%,
+    100% calc(100% - var(--c)),
+    100% calc(100% - var(--c)),
+    var(--c) calc(100% - var(--c)),
+    var(--c) calc(100% - var(--c))
+  );
+}
+.d-4:hover {
+  transition: 0.3s 0.3s, background-color 0.3s, color 0.3s;
+  background-color: blue;
+  color: #fff;
+  transform: translate(0, 0);
+  clip-path: polygon(
+    0% var(--c),
+    var(--c) 0%,
+    100% 0%,
+    100% calc(100% - var(--c)),
+    calc(100% - var(--c)) 100%,
+    0% 100%,
+    0% 100%
+  );
+}
+
+.continuous-3 {
+  background: linear-gradient(
+      90deg,
+      currentColor calc(100% / 3),
+      transparent 0 calc(200% / 3),
+      currentColor 0
+    )
+    var(--d, 0%) 100% /300% 2px no-repeat;
+  transition: 0.5s;
+}
+.continuous-3:hover {
+  --d: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border: 5px solid transparent;
+  background-clip: content-box;
+  background-color: #8070d4;
+}
