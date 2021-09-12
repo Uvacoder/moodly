@@ -1,14 +1,21 @@
 import React, { useState } from "react";
+
+// material ui
 import { Slider } from "@material-ui/core";
+
+// components
 import { Btn } from ".";
 
 // showing progress using nprogress
 import NProgress from "nprogress";
 
+// icons
 import { FiVolume, FiVolume1, FiVolume2, FiVolumeX } from "react-icons/fi";
-import toast from "react-hot-toast";
+
+import toast from "react-hot-toast"; // react-hot-toast
 
 const Main = ({ sounds }) => {
+  // play each sound
   const playSound = (name) => {
     let audio = document.getElementById(name);
     const slider = document.querySelector(`.${name}-slider`);

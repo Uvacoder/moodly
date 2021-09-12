@@ -1,5 +1,9 @@
 import React from "react";
+
+// icons
 import { FaTwitter } from "react-icons/fa";
+
+// components
 import { Btn } from ".";
 
 const Header = () => {

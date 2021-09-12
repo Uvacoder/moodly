@@ -1,5 +1,9 @@
 import React from "react";
+
+// sounds array
 import sounds from "../components/sounds";
+
+// components
 import { Adjuster, Btn, Header, Main } from "../components";
 
 const index = () => {

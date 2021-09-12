@@ -1,13 +1,17 @@
 import React from "react";
+
+// components
 import { Btn } from ".";
-import { FiShuffle } from "react-icons/fi";
-import toast from "react-hot-toast";
-import sounds from "./sounds";
+
+import { FiShuffle } from "react-icons/fi"; // icons
+import toast from "react-hot-toast"; // toast
+import sounds from "./sounds"; // data
 
 // showing progress using nprogress
 import NProgress from "nprogress";
 
 const Adjuster = () => {
+  // handle click of tracks
   const playButton = (data) => {
     data.forEach(async (name) => {
       let audio = document.getElementById(name);
@@ -41,6 +45,7 @@ const Adjuster = () => {
     });
   };
 
+  // mute alll sounds
   const stopAllSounds = () => {
     sounds.forEach((sound) => {
       let audio = document.getElementById(sound.name);
@@ -55,6 +60,7 @@ const Adjuster = () => {
     });
   };
 
+  // array of modes
   let modes = [
     {
       name: "Productivity",
@@ -76,10 +82,12 @@ const Adjuster = () => {
     },
   ];
 
+  // function to get random obj from array
   const get_random = (list) => {
     return list[Math.floor(Math.random() * list.length)];
   };
 
+  // shuffle sounds
   const shuffle = () => {
     let sound1 = get_random(sounds).name;
     let sound2 = get_random(sounds).name;
@@ -87,6 +95,7 @@ const Adjuster = () => {
 
     playButton([sound1, sound2, sound3]);
   };
+
   return (
     <div className="w-full lg:w-[90%] xl:w-[90%] ml-0 lg:ml-[5%] xl:ml-[5%] flex justify-center lg:justify-between xl:justify-between items-center">
       <div className="flex items-center">

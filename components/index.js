@@ -1,3 +1,4 @@
+// components
 export { default as Header } from "./Header";
 export { default as Adjuster } from "./Adjuster";
 export { default as Btn } from "./Btn";

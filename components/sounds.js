@@ -1,3 +1,4 @@
+// icons
 import {
   FiCloudLightning,
   FiCloudRain,
@@ -19,8 +20,8 @@ import { AiOutlineFire } from "react-icons/ai";
 import { BiFootball, BiTrain, BiWalk, BiWater } from "react-icons/bi";
 import { FaRegKeyboard } from "react-icons/fa";
 import { BsBook, BsBriefcase, BsClock } from "react-icons/bs";
-import { IoLogoOctocat } from "react-icons/io";
 
+// array of various sounds
 const sounds = [
   {
     name: "rain",
