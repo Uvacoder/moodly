@@ -3,14 +3,15 @@ import "@fontsource/plus-jakarta-sans";
 import "../styles/App.css";
 import { Toaster } from "react-hot-toast";
 import { MetaTags } from "../components";
+import PlausibleProvider from "next-plausible";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <PlausibleProvider domain="moodly-app.vercel.app">
       <Toaster position="bottom-left" reverseOrder={false} />
       <Component {...pageProps} />
       <MetaTags />
-    </>
+    </PlausibleProvider>
   );
 }
 

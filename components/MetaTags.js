@@ -76,11 +76,6 @@ const MetaTags = () => {
         data-x_margin="18"
         data-y_margin="18"
       ></script>
-      <script
-        defer
-        data-domain="moodly-app.vercel.app"
-        src="https://plausible.io/js/plausible.js"
-      ></script>
     </Head>
   );
 };
