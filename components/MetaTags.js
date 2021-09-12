@@ -45,7 +45,7 @@ const MetaTags = () => {
       />
       <meta
         property="og:image"
-        content="https://moodly.vercel.app/assets/banner.png"
+        content="https://moodly-app.vercel.app/assets/banner.png"
       />
 
       {/* Twitter */}
@@ -60,7 +60,7 @@ const MetaTags = () => {
       />
       <meta
         property="twitter:image"
-        content="https://moodly.vercel.app/assets/banner.png"
+        content="https://moodly-app.vercel.app/assets/banner.png"
       />
 
       {/* Buy Me A Coffee */}
@@ -75,6 +75,11 @@ const MetaTags = () => {
         data-position="Right"
         data-x_margin="18"
         data-y_margin="18"
+      ></script>
+      <script
+        defer
+        data-domain="moodly-app.vercel.app"
+        src="https://plausible.io/js/plausible.js"
       ></script>
     </Head>
   );
