@@ -129,6 +129,12 @@ If you found the app helpful, consider supporting me with a coffee.
 <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px">
 </a>
 
+## 🙌 Sponsor
+
+<a href="https://devdojo.com/">
+<img src="https://laravelnews.imgix.net/partners/devdojo-logo-400x100.png" height="50px">
+</a>
+
 ---
 
 <h3 align="center">
